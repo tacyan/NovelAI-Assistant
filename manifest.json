@@ -12,7 +12,7 @@
       }
     },
     "permissions": [
-      "activeTab"
+      "activeTab","storage"
     ],
     "content_scripts": [
       {

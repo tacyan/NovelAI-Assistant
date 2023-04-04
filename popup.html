@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 10px;
-      }
-      button {
-        margin-top: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>NovelAI Image Paginator</h1>
-    <p>Use the up and down arrow keys on the NovelAI image page to switch between generated images.</p>
-    <button id="close">Close</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メモ帳</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">メモ帳</h1>
+            <form id="memo-form">
+                <div class="field">
+                    <label class="label" for="title">タイトル:</label>
+                    <div class="control">
+                        <input class="input" type="text" id="title" name="title">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="prompt">プロンプト:</label>
+                    <div class="control">
+                        <textarea class="textarea" id="prompt" name="prompt"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="negativePrompt">ネガティブプロンプト:</label>
+                    <div class="control">
+                        <textarea class="textarea" id="negativePrompt" name="negativePrompt"></textarea>
+                    </div>
+                </div>
+                <button class="button is-primary" id="save">保存</button>
+            </form>
+            <hr>
+            <h2 class="title is-4">メモリスト</h2>
+            <ul id="memo-list" class="list">
+                <!-- ここにメモが動的に追加されます -->
+            </ul>
+        </div>
+    </section>
     <script src="popup.js"></script>
-  </body>
+</body>
 </html>
