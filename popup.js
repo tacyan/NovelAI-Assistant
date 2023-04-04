@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             titleInput.value = memo.title;
             promptInput.value = memo.prompt;
             negativePromptInput.value = memo.negativePrompt || '';
+            storeTemporaryValues();
           }
         });
 
